@@ -11,8 +11,8 @@ tao-docker-build: ## TAO用コンテナをビルド
 	docker-compose -f docker-compose.yaml build
 
 tao-convert:
-	docker exec -it peoplesegnet-tao-toolkit tao-converter -k nvidia_tlt -t fp16 -d 3,576,960 -e /app/src/peoplesegnet_resnet50.etlt_b1_gpu0_fp16.engine /app/src/peoplesegnet_resnet50.etlt
+	docker exec -it facedetectir-tao-toolkit tao-converter -k tlt_encode -t fp16 -d 3,240,384 -e /app/src/facedetectir.engine /app/src/resnet18_facedetectir_pruned.etlt
 
 tao-docker-login: ## TAO用コンテナにログイン
-	docker exec -it peoplesegnet-tao-toolkit bash
+	docker exec -it facedetectir-tao-toolkit bash
 

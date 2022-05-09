@@ -1,7 +1,7 @@
 version: "3"
 services:
-  peoplesegnet-tao-toolkit:
-    container_name: peoplesegnet-tao-toolkit
+  facedetectir-tao-toolkit:
+    container_name: facedetectir-tao-toolkit
     build:
       context: .
       dockerfile: ./Dockerfile
